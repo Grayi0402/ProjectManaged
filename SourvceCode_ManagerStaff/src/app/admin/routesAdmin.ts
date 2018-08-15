@@ -22,10 +22,6 @@ export const routesAdmin: Routes = [
         // canActivate:[LoginGuard],
         children: [
 
-            {
-                path: '',
-                component: AdminComponentComponent,
-                children: [
                     {
                         path: 'config',
                         component: ManagedConfigComponent
@@ -34,16 +30,13 @@ export const routesAdmin: Routes = [
                         path: 'notification',
                         component: ManagedNotificationComponent,
                         children: [
-                        {
-                            path: '',
-                            component: ManagedNotificationComponent
-                        },
+                      
                         {
                            path: 'notification-add',
                             component: NotificationAddComponent  
                         }
-                        ]
-
+                        
+                           ]
                     },
                     {
                         path: 'project',
@@ -82,9 +75,9 @@ export const routesAdmin: Routes = [
                     
                     
                 ]
-            },
+            }
 
         ]
-    }
-]
+    
+
 
