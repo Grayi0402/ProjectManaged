@@ -10,7 +10,7 @@
         <option value="audi">{{typeNotification._khac}}</option>
       </select>
       <p class="_select">Quy mô:
-        <select>
+        <select class = "right">
           <option value="volvo">{{quyMo._toanCty}}</option>
           <option value="saab">{{quyMo._chiNhanh}}</option>
           <option value="opel">{{quyMo._nhomNguoi}}</option>
@@ -19,7 +19,13 @@
         </select>
       </p>
   </div>
+      <button type="[button]" id="add" (click)="onAdd()">Thêm</button>
+      <a href="#"><button id="out" class = "rightadd">Xuất</button></a>
   <div>
+ <!--  <div id="get-out">
+      <a href="#"><button id="out">Xuất</button></a>
+  </div> -->
+    <br>
     <table>
       <tr>
         <th>STT</th>
@@ -29,6 +35,7 @@
         <th>Nội dung</th>
         <th>Đối tượng</th>
         <th>Trạng thái</th>
+        <th>Thao tác</th>
       </tr>
       <tr>
         <td>1</td>
@@ -39,10 +46,18 @@
         <td>{{notification.APPLY_FOR_ID}}</td>
         <td *ngIf="notification.STATUS==1; else elseStop">Hoạt động</td>
         <ng-template #elseStop>Ngưng hoạt động</ng-template>
+        <td>
+          <button type="[button]" value = "Xóa"></button>
+          <button type="[button]" value = "Sữa"></button>
+        </td>
+
       </tr> 
     </table>
   </div>
-  <button type="[button]" class="button" (click)="onAdd()">Add</button>
+
+
+
+
 </div>
 </div>
 <div>
