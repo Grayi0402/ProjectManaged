@@ -20,10 +20,6 @@ export const routesAdmin: Routes = [
         canActivate:[LoginGuard],
         children: [
 
-            {
-                path: '',
-                component: AdminComponentComponent,
-                children: [
                     {
                         path: 'config',
                         component: ManagedConfigComponent
@@ -40,10 +36,6 @@ export const routesAdmin: Routes = [
                         path: 'staff',
                         component: ManagedStaffComponent,
                         children:[
-                            {
-                                path:'',
-                                component: ManagedStaffComponent
-                            },
                             {
                                 path:'staff-infor',
                                 component: StaffInforComponent
@@ -67,10 +59,6 @@ export const routesAdmin: Routes = [
                         component: HomePageComponent
                     },
                     
-                    
-                ]
-            },
-
         ]
     }
 ]
