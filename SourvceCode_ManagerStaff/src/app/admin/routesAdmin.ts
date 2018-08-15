@@ -13,13 +13,11 @@ import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.co
 import { LoginGuard } from './../AdminLogin.guard';
 
 
-
-
 export const routesAdmin: Routes = [
     {
         path: 'admin',
         component: AdminComponentComponent,
-        // canActivate:[LoginGuard],
+         canActivate:[LoginGuard],
         children: [
 
                     {
@@ -78,6 +76,9 @@ export const routesAdmin: Routes = [
             }
 
         ]
+<<<<<<< HEAD
     
+=======
+>>>>>>> 43a62168daecc3c090767d9e63ec672963c438ac
 
 
