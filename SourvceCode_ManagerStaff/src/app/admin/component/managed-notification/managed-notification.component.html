@@ -42,7 +42,10 @@
       </tr> 
     </table>
   </div>
-  <button type="text" class="button" [routerLink]="['notification/notification_add']">Thêm</button>
+  <button type="[button]" class="button" (click)="onAdd()">Add</button>
 </div>
 </div>
-<router-outlet></router-outlet>
+<div *ngIf="[check]==true">
+  <router-outlet></router-outlet>
+</div>
+

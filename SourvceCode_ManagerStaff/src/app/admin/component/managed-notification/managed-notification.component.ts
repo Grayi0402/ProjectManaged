@@ -5,7 +5,7 @@ import  { Validators } from '@angular/forms'
 import { FormGroup} from '@angular/forms'
 import { FormBuilder} from '@angular/forms'
 import { FormArray} from '@angular/forms'
-
+import {ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-managed-notification',
@@ -29,8 +29,17 @@ public typeNotification={_thTin:"Thông tin",_khCap:"Khẩn cấp",_deNghi:"Đ�
 		DATE_CREATED: '14/08/2018',
 		DATE_UPDATE: '14/08/2018'
 		};
-  constructor() { }
-
+	public check: boolean=false;
+  constructor(
+  		public routerService: Router,
+  		public activatedRoute: ActivatedRoute) { }
   ngOnInit() {
+  }
+  onAdd(){
+  	this.check=true;
+  	this.routerService.navigate(['notification/notification-add'], {
+			relativeTo: this.activatedRoute.parent
+		})
+  
   }
 }
