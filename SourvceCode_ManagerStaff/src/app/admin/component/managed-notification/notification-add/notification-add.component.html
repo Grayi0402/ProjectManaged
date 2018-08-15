@@ -1,0 +1,35 @@
+<div>
+  <div class="container">
+    <h2>THÊM THÔNG BÁO</h2>
+    <form [formGroup]="frmNote" (ngSubmit)="onSubmitForms()">
+      <div class="form-group">
+        <label>Tên thông báo:</label>
+        <input class="form-control" placeholder="Tên thông báo" formControlName="COMPANY_NOTIFICATION_NAME">
+      </div>
+      <div class="form-group">
+        <label>Loại thông báo: </label>
+        <select id="12" formControlName="COMPANY_NOTIFICATION_TYPE">
+          <option value="volvo">{{typeNotification._thTin}}</option>
+          <option value="saab">{{typeNotification._khCap}}</option>
+          <option value="opel">{{typeNotification._deNghi}}</option>
+          <option value="audi">{{typeNotification._khac}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Nội dung thông báo:</label>
+        <input class="form-control" placeholder="Nhập nội dung thông báo" formControlName="COMPANY_NOTIFICATION_CONTENT">
+      </div>
+      <div class="form-group">
+        <label>Đối tượng áp dụng: </label>
+        <select formControlName="APPLY_FOR_ID">
+          <option value="volvo">{{quyMo._toanCty}}</option>
+          <option value="saab">{{quyMo._chiNhanh}}</option>
+          <option value="opel">{{quyMo._nhomNguoi}}</option>
+          <option value="audi">{{quyMo._caNhan}}</option>
+          <option value="audi">{{quyMo._khac}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">THÊM</button>
+    </form>
+  </div>
+</div>

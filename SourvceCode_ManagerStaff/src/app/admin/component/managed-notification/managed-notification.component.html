@@ -1,3 +1,48 @@
-<p>
-  managed-notification works!
-</p>
+<div class="formm">
+<h1 class="header">DANH SÁCH THÔNG BÁO</h1>
+<div>
+  <div>
+    <p class="_select">Loại thông báo:
+      <select>
+        <option value="volvo">{{typeNotification._thTin}}</option>
+        <option value="saab">{{typeNotification._khCap}}</option>
+        <option value="opel">{{typeNotification._deNghi}}</option>
+        <option value="audi">{{typeNotification._khac}}</option>
+      </select>
+      <p class="_select">Quy mô:
+        <select>
+          <option value="volvo">{{quyMo._toanCty}}</option>
+          <option value="saab">{{quyMo._chiNhanh}}</option>
+          <option value="opel">{{quyMo._nhomNguoi}}</option>
+          <option value="audi">{{quyMo._caNhan}}</option>
+          <option value="audi">{{quyMo._khac}}</option>
+        </select>
+      </p>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <th>STT</th>
+        <th>Mã thông báo</th>
+        <th>Tên thông báo</th>
+        <th>Loại thông báo</th>
+        <th>Nội dung</th>
+        <th>Đối tượng</th>
+        <th>Trạng thái</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>{{notification.COMPANY_NOTIFICATION_CODE}}</td>
+        <td>{{notification.COMPANY_NOTIFICATION_NAME}}</td>
+        <td>{{notification.COMPANY_NOTIFICATION_TYPE}}</td>
+        <td>{{notification.COMPANY_NOTIFICATION_CONTENT}}</td>
+        <td>{{notification.APPLY_FOR_ID}}</td>
+        <td *ngIf="notification.STATUS==1; else elseStop">Hoạt động</td>
+        <ng-template #elseStop>Ngưng hoạt động</ng-template>
+      </tr> 
+    </table>
+  </div>
+  <button type="text" class="button" [routerLink]="['notification/notification_add']">Thêm</button>
+</div>
+</div>
+<router-outlet></router-outlet>

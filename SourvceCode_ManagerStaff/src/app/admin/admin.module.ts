@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AllCommonModuleModule } from './../all-common-module/all-common-module.module'
 import { RouterModule } from '@angular/router';
+import  {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 //component
 import { ManagedConfigComponent } from './component/managed-config/managed-config.component';
 import { ManagedNotificationComponent } from './component/managed-notification/managed-notification.component';
@@ -16,13 +18,15 @@ import { ManagedSalaryComponent } from './component/managed-salary/managed-salar
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { StaffInforComponent } from './component/managed-staff/staff-infor/staff-infor.component';
 import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.component';
+import { NotificationAddComponent } from './component/managed-notification/notification-add/notification-add.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AllCommonModuleModule,
-    RouterModule.forChild(routesAdmin)
-   
+    RouterModule.forChild(routesAdmin),
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [ManagedConfigComponent,
     ManagedNotificationComponent,
@@ -34,6 +38,7 @@ import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.co
     HomePageComponent,
     StaffInforComponent,
     CvInforComponent,
+    NotificationAddComponent,
    
     
     ],
