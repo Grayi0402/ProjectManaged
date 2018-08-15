@@ -3,7 +3,7 @@
 	text-align: center ;
 }
 ._select{
-	color: red;
+	color: black;
 	font-size: 125%;
 }
 .table, td, th{
@@ -201,6 +201,8 @@ a .pages-number {
 	text-align: center;
 	display: inline-block;
 	// cursor: pointer;
+	text-align: right;
+
 }
 a .pages-number:hover {
 	background: rgb(153, 204, 255);

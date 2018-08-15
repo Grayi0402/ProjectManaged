@@ -55,13 +55,12 @@ ngOnInit() {
 }	
 public typeNotification={_thTin:"Thông tin",_khCap:"Khẩn cấp",_deNghi:"Đề nghị",_khac:"Khác"};
 	public quyMo={_toanCty:"Toàn công ty",_chiNhanh:"Chi nhánh",_nhomNguoi:"Nhóm người",_caNhan:"Cá nhân",_khac:"Khác"};
-<<<<<<< HEAD
+
 onSubmitForms(){
 		console.log(this.frmNote);
 	}
 	public text: string="Thông tin";
 	add(){
 	}
-=======
->>>>>>> 43a62168daecc3c090767d9e63ec672963c438ac
+
 }
