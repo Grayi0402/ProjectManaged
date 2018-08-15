@@ -13,13 +13,11 @@ import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.co
 import { LoginGuard } from './../AdminLogin.guard';
 
 
-
-
 export const routesAdmin: Routes = [
     {
         path: 'admin',
         component: AdminComponentComponent,
-        // canActivate:[LoginGuard],
+         canActivate:[LoginGuard],
         children: [
 
                     {
@@ -30,16 +28,13 @@ export const routesAdmin: Routes = [
                         path: 'notification',
                         component: ManagedNotificationComponent,
                         children: [
-                        {
-                            path: '',
-                            component: ManagedNotificationComponent
-                        },
+                      
                         {
                            path: 'notification-add',
                             component: NotificationAddComponent  
                         }
-                        ]
-
+                        
+                           ]
                     },
                     {
                         path: 'project',
@@ -49,6 +44,10 @@ export const routesAdmin: Routes = [
                         path: 'staff',
                         component: ManagedStaffComponent,
                         children:[
+                            {
+                                path:'',
+                                component: ManagedStaffComponent
+                            },
                             {
                                 path:'staff-infor',
                                 component: StaffInforComponent
@@ -72,7 +71,10 @@ export const routesAdmin: Routes = [
                         component: HomePageComponent
                     },
                     
+                    
+                ]
+            }
+
         ]
-    }
-]
+
 
