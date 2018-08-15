@@ -76,5 +76,9 @@ export const routesAdmin: Routes = [
             }
 
         ]
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 43a62168daecc3c090767d9e63ec672963c438ac
 
 
