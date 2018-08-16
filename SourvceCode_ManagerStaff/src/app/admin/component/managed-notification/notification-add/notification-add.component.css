@@ -77,3 +77,46 @@ div.note{
 #add:hover{
 	background: rgb(204, 51, 1);
 }
+#back{
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	background: #C60;
+	padding: 7px 20px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+a #back:hover {
+	background: rgb(204, 51, 1);
+}
+a #back{
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	background: #C60;
+	padding: 7px 20px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+a #back:hover {
+	background: rgb(204, 51, 1);
+}
+
+#add{
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	background: #C60;
+	padding: 7px 20px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+#add:hover{
+	background: rgb(204, 51, 1);
+}

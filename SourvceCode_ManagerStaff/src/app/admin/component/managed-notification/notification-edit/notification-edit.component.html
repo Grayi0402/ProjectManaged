@@ -1,6 +1,6 @@
 <div>
   <div >
-    <h2>THÊM THÔNG BÁO</h2>
+    <h2>SỬA THÔNG BÁO</h2>
     <form [formGroup]="frmNote" (ngSubmit)="onSubmitForms()">
       <div class="form-group">
         <label>Tên thông báo:</label>
@@ -17,7 +17,7 @@
       </div>
       <div class="form-group">
         <label>Nội dung thông báo:</label>
-        <input class="form-control" placeholder="Nội dung thông báoj" formControlName="COMPANY_NOTIFICATION_CONTENT">
+        <input class="form-control" placeholder="Nội dung thông báo" formControlName="COMPANY_NOTIFICATION_CONTENT">
       </div>
       <div class="form-group">
         <label>Đối tượng áp dụng: </label>
@@ -29,7 +29,7 @@
           <option value="{{quyMo._khac}}">{{quyMo._khac}}</option>
         </select>
       </div>
-      <button type="submit" id="add" class="btn btn-primary" (click)="add()">Thêm</button>
+      <button type="submit" id="add" class="btn btn-primary" (click)="add()">Sửa</button>
     </form>
   </div>
 </div>

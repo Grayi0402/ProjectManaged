@@ -17,7 +17,7 @@
       </div>
       <div class="form-group">
         <label>Nội dung thông báo:</label>
-        <input class="form-control" placeholder="Nội dung thông báoj" formControlName="COMPANY_NOTIFICATION_CONTENT">
+        <input class="form-control" placeholder="Nội dung thông báo" formControlName="COMPANY_NOTIFICATION_CONTENT">
       </div>
       <div class="form-group">
         <label>Đối tượng áp dụng: </label>
@@ -28,8 +28,11 @@
           <option value="{{quyMo._caNhan}}">{{quyMo._caNhan}}</option>
           <option value="{{quyMo._khac}}">{{quyMo._khac}}</option>
         </select>
-      </div>
-      <button type="submit" id="add" class="btn btn-primary" (click)="add()">Thêm</button>
+      </div> 
+        <button type="submit" id="back" class="btn btn-success"(click)="back()">Trở về</button>
+
+      <button type="submit" id="add" class="btn btn-danger" (click)="add()">Thêm</button>
+
     </form>
   </div>
 </div>

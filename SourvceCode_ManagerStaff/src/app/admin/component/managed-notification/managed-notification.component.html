@@ -59,8 +59,8 @@
         <td *ngIf="notification.STATUS==1; else elseStop">Hoạt động</td>
         <ng-template #elseStop>Ngưng hoạt động</ng-template>
         <td>
-          <button type="[button]" value = "Xóa"id ="add">Xóa</button>
-          <button type="[button]" value = "Sửa" id="add">Sửa</button>
+          <button type="[button]" value = "Xóa"id ="add"class="btn-danger">Xóa</button>
+          <button type="[button]" value = "Sửa" id="add" class="btn-danger" (click)="onEdit()">Sửa</button>
         </td>
 
       </tr> 
@@ -74,6 +74,7 @@
 </div>
 <br>
 <div id="check-pages">
+  <<
   <a href="#"><button class="pages-number">1</button></a>
   <a href="#"><button class="pages-number">2</button></a>
   <a href="#"><button class="pages-number">3</button></a>

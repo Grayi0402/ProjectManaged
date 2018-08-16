@@ -11,74 +11,84 @@ import { NotificationAddComponent } from './component/managed-notification/notif
 import { StaffInforComponent } from './component/managed-staff/staff-infor/staff-infor.component';
 import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.component';
 import { LoginGuard } from './../AdminLogin.guard';
+import { NotificationEditComponent } from './component/managed-notification/notification-edit/notification-edit.component'
 
 
 export const routesAdmin: Routes = [
     {
         path: 'admin',
         component: AdminComponentComponent,
-         canActivate:[LoginGuard],
+        canActivate: [LoginGuard],
         children: [
 
+            {
+                path: 'config',
+                component: ManagedConfigComponent
+            },
+            {
+                path: 'notification',
+                component: ManagedNotificationComponent,
+                children: [
+
                     {
-                        path: 'config',
-                        component: ManagedConfigComponent
+                        path: 'notification-add',
+                        component: NotificationAddComponent
                     },
-                    {
-                        path: 'notification',
-                        component: ManagedNotificationComponent,
-                        children: [
-                      
-                        {
-                           path: 'notification-add',
-                            component: NotificationAddComponent  
-                        }
-                        
-                           ]
-                    },
-                    {
-                        path: 'project',
-                        component: ManagedProjectComponent
-                    },
-                    {
-                        path: 'staff',
-                        component: ManagedStaffComponent,
-                        children:[
-                            {
-                                path:'',
-                                component: ManagedStaffComponent
-                            },
-                            {
-                                path:'staff-infor',
-                                component: StaffInforComponent
-                            },
-                            {
-                                path:'cv-infor',
-                                component: CvInforComponent
-                            }
-                        ]
-                    },
-                    {
-                        path: 'timesheet',
-                        component: ManagedTimesheetComponent
-                    },
-                    {
-                        path: 'salary',
-                        component: ManagedSalaryComponent
-                    },
-                    {
-                        path: 'index',
-                        component: HomePageComponent
-                    },
-                    
                     
                 ]
+            },
+            {
+                path:'notification/:id',
+                component: ManagedNotificationComponent,
+                children:[
+                    {
+                        path:'edit',
+                        component:NotificationEditComponent  
+                    }
+                ]
+
+
             }
+            ,
+            {
+                path: 'project',
+                component: ManagedProjectComponent
+            },
+            {
+                path: 'staff',
+                component: ManagedStaffComponent,
+                children: [
+                    {
+                        path: '',
+                        component: ManagedStaffComponent
+                    },
+                    {
+                        path: 'staff-infor',
+                        component: StaffInforComponent
+                    },
+                    {
+                        path: 'cv-infor',
+                        component: CvInforComponent
+                    }
+                ]
+            },
+            {
+                path: 'timesheet',
+                component: ManagedTimesheetComponent
+            },
+            {
+                path: 'salary',
+                component: ManagedSalaryComponent
+            },
+            {
+                path: 'index',
+                component: HomePageComponent
+            },
+
 
         ]
-<<<<<<< HEAD
-    
-=======
->>>>>>> 43a62168daecc3c090767d9e63ec672963c438ac
+    }
+
+]
 
 
