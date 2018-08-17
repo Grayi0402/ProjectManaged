@@ -46,7 +46,7 @@ export const routesAdmin: Routes = [
                         children:[
                             {
                                 path:'',
-                                component: ManagedStaffComponent
+                                component: HomePageComponent
                             },
                             {
                                 path:'staff-infor',

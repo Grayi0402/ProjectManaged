@@ -34,11 +34,11 @@ export class LoginToRoleComponent implements OnInit {
     this.username = target.querySelector('#username').value;
     this.password = target.querySelector('#password').value;
     this.role = target.querySelector('#selected').value;
-    console.log(typeof(this.password));
+
     if(this.username != '' && this.password !='')
     {
       this.msg='';
-    let admin = {
+      let admin = {
       username:this.username,
       password:this.password,
       role:this.role
