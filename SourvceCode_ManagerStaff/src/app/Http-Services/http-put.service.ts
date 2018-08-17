@@ -11,8 +11,8 @@ export class HttpPutService {
   	private _httpClient : HttpClient
   	) { }
 
-  updateData(api:string,data){
-  	return this._httpClient.put(api,data)
+  updateData(api:string,obj:any):Observable<any>{
+  	return this._httpClient.put(`${api}/${obj.id}`,obj)
 		.pipe(catchError(this.errorHandler))
   }
   errorHandler(error: HttpErrorResponse){

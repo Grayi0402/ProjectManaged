@@ -20,6 +20,9 @@ import { StaffInforComponent } from './component/managed-staff/staff-infor/staff
 import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.component';
 import { NotificationAddComponent } from './component/managed-notification/notification-add/notification-add.component';
 import { NotificationEditComponent } from './component/managed-notification/notification-edit/notification-edit.component';
+import { StaffListAddComponent } from './component/managed-staff/staff-list/staff-list-add/staff-list-add.component'
+import { StaffListDetailComponent } from './component/managed-staff/staff-list/staff-list-detail/staff-list-detail.component'
+import { StaffListComponent } from './component/managed-staff/staff-list/staff-list.component'
 
 @NgModule({
   imports: [
@@ -41,6 +44,9 @@ import { NotificationEditComponent } from './component/managed-notification/noti
     CvInforComponent,
     NotificationAddComponent,
     NotificationEditComponent,
+    StaffListAddComponent,
+    StaffListDetailComponent,
+    StaffListComponent
    
     
     ],

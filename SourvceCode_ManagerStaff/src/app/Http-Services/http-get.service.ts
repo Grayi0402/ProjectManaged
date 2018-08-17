@@ -10,12 +10,13 @@ export class HttpGetService {
 	constructor(
 		private _httpClient: HttpClient
 	) { }
-	getAllData(api) {
-		return this._httpClient.get(api)
-			.pipe(catchError(this.errorHandler))
+	 getAll(api :string, obj: Object):Observable<HttpResponse<Object[]>>{
+	return this._httpClient.get<Object[]>(api,{observe:"response"}).pipe(catchError(this.errorHandle));
 
-	}
-	errorHandler(error: HttpErrorResponse) {
-		return throwError(error.message || "Serve Error");
-	}
+
+  }
+
+  errorHandle(error: HttpErrorResponse){
+	return throwError(error.message || "Serve Error");
+  }
 }

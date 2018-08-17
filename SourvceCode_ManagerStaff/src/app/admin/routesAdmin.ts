@@ -13,6 +13,11 @@ import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.co
 import { LoginGuard } from './../AdminLogin.guard';
 import { NotificationEditComponent } from './component/managed-notification/notification-edit/notification-edit.component'
 
+//thach - component
+import {StaffListComponent} from './component/managed-staff/staff-list/staff-list.component'
+import {StaffListAddComponent} from './component/managed-staff/staff-list/staff-list-add/staff-list-add.component'
+import {StaffListDetailComponent} from './component/managed-staff/staff-list/staff-list-detail/staff-list-detail.component'
+
 
 export const routesAdmin: Routes = [
     {
@@ -42,28 +47,10 @@ export const routesAdmin: Routes = [
                 component: ManagedNotificationComponent,
                 children:[
                     {
-<<<<<<< HEAD
                         path: 'staff',
                         component: ManagedStaffComponent,
-                        children:[
-                            {
-                                path:'',
-                                component: HomePageComponent
-                            },
-                            {
-                                path:'staff-infor',
-                                component: StaffInforComponent
-                            },
-                            {
-                                path:'cv-infor',
-                                component: CvInforComponent
-                            }
-                        ]
+                        
                     },
-=======
-                        path:'edit',
-                        component:NotificationEditComponent  
-                    }
                 ]
 
 
@@ -76,21 +63,32 @@ export const routesAdmin: Routes = [
             {
                 path: 'staff',
                 component: ManagedStaffComponent,
-                children: [
->>>>>>> d35eba40ea3a8c3271b8a7e7efe2563ce5156c65
-                    {
-                        path: '',
-                        component: ManagedStaffComponent
-                    },
-                    {
-                        path: 'staff-infor',
-                        component: StaffInforComponent
-                    },
-                    {
-                        path: 'cv-infor',
-                        component: CvInforComponent
-                    }
-                ]
+                children:[
+                            {
+                                path:'',
+                                component: HomePageComponent
+                            },
+                            {
+                                path:'staff-list',
+                                component:StaffListComponent,
+                            },
+                            {
+                                path:'cv-infor',
+                                component: CvInforComponent
+                            },
+                            {
+                                path: 'staff-list-add',
+                                component: StaffListAddComponent,
+                            },
+                            {
+                                path:'cv-infor',
+                                component: CvInforComponent,
+                            },
+                            {
+                                path: ':id',
+                                component: StaffListDetailComponent,
+                            }
+                        ]
             },
             {
                 path: 'timesheet',

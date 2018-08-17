@@ -12,10 +12,10 @@ export class HttpDeleteService {
 	constructor(
 		private _httpClient: HttpClient
 	) { }
-	deleteProduct(api: string, id: number) {
-		return this._httpClient.delete(`${api}/${id}`).pipe(catchError(this.errorHandler));
-	}
-	errorHandler(error: HttpErrorResponse) {
-		return throwError(error.message || "Serve Error");
-	}
+	delete(id:number, api:string){
+return this._httpClient.delete(`${api}/${id}`).pipe(catchError(this.errorHandle));
+  }
+  errorHandle(error: HttpErrorResponse){
+	return throwError(error.message || "Serve Error");
+  }
 }

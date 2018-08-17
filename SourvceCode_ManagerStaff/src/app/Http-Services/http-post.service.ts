@@ -9,13 +9,12 @@ export class HttpPostService {
 
   constructor(
 	  private _httpClient: HttpClient) { }
-  	addData(api,data) {
-		return this._httpClient.post(api,data).pipe(catchError(this.errorHandler));
-	
-	}
-	errorHandler(error: HttpErrorResponse){
-		return throwError(error.message || "Serve Error");
-	}
+  	 add(obj: Object, api:string):Observable<Object>{
+	return this._httpClient.post<Object>(api,obj).pipe(catchError(this.errorHandle));
+  }
+  errorHandle(error: HttpErrorResponse){
+	return throwError(error.message || "Serve Error");
+  }
 
 
 }
