@@ -1,6 +1,6 @@
 <div>
   <div >
-    <h2>THÊM THÔNG BÁO</h2>
+    <h2>SỬA THÔNG BÁO</h2>
     <form [formGroup]="frmNote" (ngSubmit)="onSubmitForms()">
       <div class="form-group">
         <label>Tên thông báo:</label>
@@ -28,11 +28,8 @@
           <option value="{{quyMo._caNhan}}">{{quyMo._caNhan}}</option>
           <option value="{{quyMo._khac}}">{{quyMo._khac}}</option>
         </select>
-      </div> 
-        <button type="submit" id="back" class="btn btn-success"(click)="back()">Trở về</button>
-
-      <button type="submit" id="add" class="btn btn-danger" (click)="add()">Thêm</button>
-
+      </div>
+      <button type="submit" id="add" class="btn btn-primary" (click)="add()">Sửa</button>
     </form>
   </div>
 </div>

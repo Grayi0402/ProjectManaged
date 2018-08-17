@@ -19,6 +19,7 @@ import { HomePageComponent } from './component/home-page/home-page.component';
 import { StaffInforComponent } from './component/managed-staff/staff-infor/staff-infor.component';
 import { CvInforComponent } from './component/managed-staff/cv-infor/cv-infor.component';
 import { NotificationAddComponent } from './component/managed-notification/notification-add/notification-add.component';
+import { NotificationEditComponent } from './component/managed-notification/notification-edit/notification-edit.component';
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { NotificationAddComponent } from './component/managed-notification/notif
     StaffInforComponent,
     CvInforComponent,
     NotificationAddComponent,
+    NotificationEditComponent,
    
     
     ],

@@ -42,4 +42,10 @@ public typeNotification={_thTin:"Thông tin",_khCap:"Khẩn cấp",_deNghi:"Đ�
 		})
   
   }
-}
+  onEdit(){
+  	this.check= true;
+  	this.routerService.navigate(['notification/1/notification-edit'])
+  
+  }
+  }
+
