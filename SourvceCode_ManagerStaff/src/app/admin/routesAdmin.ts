@@ -18,9 +18,9 @@ import {StaffListAddComponent} from './component/managed-staff/staff-list/staff-
 import {StaffListDetailComponent} from './component/managed-staff/staff-list/staff-list-detail/staff-list-detail.component'
 
 //linh
-import { StaffCvComponent } from './component/managed-staff/staff-cv/staff-cv.component'
-import { AddStaffCvComponent } from './component/managed-staff/staff-cv/add-staff-cv/add-staff-cv.component'
-import { EditStaffCvComponent } from './component/managed-staff/staff-cv/edit-staff-cv/edit-staff-cv.component'
+// import { StaffCvComponent } from './component/managed-staff/staff-cv/staff-cv.component'
+// import { AddStaffCvComponent } from './component/managed-staff/staff-cv/add-staff-cv/add-staff-cv.component'
+// import { EditStaffCvComponent } from './component/managed-staff/staff-cv/edit-staff-cv/edit-staff-cv.component'
 
 export const routesAdmin: Routes = [
     {
@@ -87,18 +87,18 @@ export const routesAdmin: Routes = [
                                 path:'cv-infor',
                                 component: CvInforComponent,
                             },
-                            {
-                                path: 'staffcv',
-                                component: StaffCvComponent
-                            },
-                            {
-                                path: 'addcv',
-                                component: AddStaffCvComponent
-                            },
-                            {
-                                path: 'editcv',
-                                component: EditStaffCvComponent
-                            },
+                            // {
+                            //     path: 'staffcv',
+                            //     component: StaffCvComponent
+                            // },
+                            // {
+                            //     path: 'addcv',
+                            //     component: AddStaffCvComponent
+                            // },
+                            // {
+                            //     path: 'editcv',
+                            //     component: EditStaffCvComponent
+                            // },
                             {
                                 path: ':id',
                                 component: StaffListDetailComponent,
