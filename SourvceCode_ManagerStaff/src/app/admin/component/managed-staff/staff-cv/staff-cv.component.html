@@ -1,0 +1,93 @@
+  <div class="header">
+    <h1><i>
+  <div style=" text-align:center;color: #9e6027">Thông tin tìm kiếm</div>
+  </i>
+</h1>
+    <div class="search">
+      <div class="column-left">
+        <div class="column">
+          <label>Tên:</label>
+          <span><input type="text"></span>
+        </div>
+      </div>
+      <div class="column-center">
+        <div class="column">
+          <label>Vị trí ứng tuyển:</label>
+          <span><input type="text"></span>
+        </div>
+        <br>
+      </div>
+      <div class="column-right">
+        <div class="column">
+          <label>Ngày ứng tuyển:</label>
+          <span><input type="text"></span>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+    <div class="button-search">
+      <button>TÌM KIẾM</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="button-add">
+     <button type="button"  (click)="add (item, template)" class="btn btn-info">Thêm </button> </div>
+    <div class="content-detail">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Họ và Tên</th>
+            <th>Ngày ứng tuyển</th>
+            <th>Vị trí ứng tuyển</th>
+            <th>Người giới thiệu</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Kết quả</th>
+            <th>Ghi chú</th>
+            <th>Linh_CV</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let item of managerStaffService.list;let i = index"> 
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.ngayUngTuyen}}</td>
+    <td>{{item.viTriUTuyen}}</td>
+    <td>{{item.nguoiGThieu}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.phone}}</td>
+    <td>{{item.result}}</td>
+    <td>{{item.note}}</td>
+    <td>{{item.link_cv}}</td>
+        <td> 
+<!--         <button  type="button" class="btn btn" (click)="edit(item, template)"></button>
+ --> 
+    <i (click)="edit(item, template)" class="fa fa-edit" id="edit"></i>   
+    <i  (click)="del(item.userId) "class="fa fa-remove" id="delete"></i>
+     <!-- <button  type="button" class="btn btn" (click)="del(item.userId)"></button> -->
+        
+         </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <div id="get-out">
+      <button id="out">Xuất</button>
+    </div>
+<!-- phân trang -->
+<div class="row">
+  <div class="col-xs-12 col-12">
+    <pagination class="pages-number" [totalItems]="totalItems" [(ngModel)]="currentPage"></pagination>
+  </div>
+</div>
+
+
+
+<!-- view thể hiện -->
+<ng-template #template>
+  <app-add-staff-cv></app-add-staff-cv>
+</ng-template>
+
